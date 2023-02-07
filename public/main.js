@@ -4,7 +4,7 @@ let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop =()=>{
     return (shop.innerHTML = shopItemsData.map((x)=>{
-        let {price,name,cost,desc,image} = x;
+        let {price,name,cost,desc,image,product} = x;
         let search = basket.find((x)=>x.price === price) || [];
         return `
 
@@ -20,10 +20,10 @@ let generateShop =()=>{
                     <button onclick="increment(${price})" class="v5_117" type="button">Add to cart</button>
 
                 </div>
-
+                <a href="${product}.html"> view</a>
                <!--<span class="v5_116">ADD TO CART </span> <div id="${price}" ><button onclick="increment(${price})" class="v5_115 v5_116 v5_117" type="button">Add to cart</button></div>-->
             
-                <div><span class="v5_118">ORIGINALS</span></div>
+                <div><span class="v5_118"><a href="${product}.html">ORIGINALS</a></span></div>
                 
         </div>
 
