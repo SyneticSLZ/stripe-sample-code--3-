@@ -1,5 +1,5 @@
 let shop = document.getElementById('shop');
-
+let buttontext = document.getElementsByClassName('addtocart')
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop =()=>{
@@ -8,24 +8,37 @@ let generateShop =()=>{
         let search = basket.find((x)=>x.price === price) || [];
         return `
 
-        <div class="v5_110" id=product-id-${price}>
+
+
+
+        <div class="v5_110 col-3" id=product-id-${price}>
+      
                 <div class="v5_111" id=product-id-${price}></div>
                 
-                <div><span class="v5_112">VARITY</span></div>
+                <div><span class="v5_112 hover-color">VARITY</span></div> 
                 <div class="v5_113"></div>
-                <div><span class="v5_114" >${name}</span></div>
-            
-               <div  class="v5_115" id="${price}" >
+                <p class="click-text" >CLICK TO VIEW</p>
+                <p class="hover-color" >${name}</p> 
+                
+                
+                <div id="${price}" class="addtocart" >
                     
-                    <button onclick="increment(${price})" class="v5_117" type="button">Add to cart</button>
-
-                </div>
-                <a href="${product}.html"> view</a>
-               <!--<span class="v5_116">ADD TO CART </span> <div id="${price}" ><button onclick="increment(${price})" class="v5_115 v5_116 v5_117" type="button">Add to cart</button></div>-->
+                    <button onclick="increment(${price})" class="btn addtocart" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">ADD TO CART</button>
+                    
+                </div> 
             
-                <div><span class="v5_118"><a href="${product}.html">ORIGINALS</a></span></div>
+                <span class="v5_118"><a href="${product}.html">ORIGINALS</a></span> 
+    
                 
         </div>
+
+
+
+
+
+
+
+
 
        <!-- <div id=product-id-${price} class="col-4 item">
                 <img src=${image} alt="">
@@ -54,6 +67,26 @@ let generateShop =()=>{
 
 generateShop();
 
+/*
+Fetch the buttom element
+*/
+const button = document.body.querySelector('[data-target="#collapseExample"]');
+
+/*
+Add click event listener where we will provide logic that updates the button text
+*/
+button.addEventListener('click', function() {
+  
+  /*
+  Update the text of the button to toggle beween "More" and "Less" when clicked
+  */
+//   if(button.innerText === 'less') {
+     button.innerText = 'ADDED TO CART';
+//   }
+//   else {
+//     button.innerText = 'Less';
+//   }
+});
 
 let increment = (price)=>{
     
@@ -61,21 +94,23 @@ let increment = (price)=>{
     let search = basket.find((x)=>x.price === selectedItem.id)
 
     if(!search){
-        console.log(selectedItem.id, "eirnewinr")
+        // console.log(selectedItem.id, "eirnewinr")
         basket.push({
             price: selectedItem.id,
             quantity: 1,
+            
         });
     }
     else{
         search.quantity += 1;
     }
-    
     //console.log(basket)
     update(selectedItem.id);
 
     localStorage.setItem("data", JSON.stringify(basket))
 };
+
+
 let decrement = (price)=>{
     let selectedItem = price;
     let search = basket.find((x)=>x.price === selectedItem.id)

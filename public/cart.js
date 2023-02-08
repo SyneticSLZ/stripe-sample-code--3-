@@ -2,6 +2,8 @@ let label = document.getElementById('label');
 let ShoppingCart = document.getElementById("shopping-cart");
 let Table = document.getElementById("table");
 let myCart = document.getElementById("my-cart");
+let CartContainer = document.getElementById("cart-page");
+
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -187,7 +189,7 @@ let generateCartItems = ()=>{
 
 
             <td class="other-row">
-            <a href="" onclick="removeItem(${price})">X</a>
+            <div class="otherrowaa"> <span href="" onclick="removeItem(${price})">X</span></div>
             </td>
 
 
@@ -203,13 +205,16 @@ let generateCartItems = ()=>{
 
 }
     else{
-        Table.innerHTML = ``;
+        Table.innerHTML = `
+
+        <h2 class="title">Cart is empty</h2>
+        <a href="products.html" class="a">
+            <button class="btn"> back to shop </button>
+        </a>
+
+        `;
         myCart.innerHTML = ``;
-        label.innerHTML = `
-            <h2 class="title">Cart is empty</h2>
-            <a href="products.html">
-                <button class="btn"> back to shop </button>
-            </a>
+        CartContainer.innerHTML = `
         `;
     }
 };
@@ -229,11 +234,11 @@ let totalAmount = () => {
         console.log(amount)
         label.innerHTML = `
 
-
+        <tr><div class="verysmallcontainer">
             <div class="check"></div>
             <div><p>SubTotal £${amount}</p></div>
             <div><button id="click" class="v5_117" onclick="getInfo()">Checkout</button></div>
-
+        </div></tr>
 
 
 
