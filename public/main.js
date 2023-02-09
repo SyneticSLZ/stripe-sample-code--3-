@@ -27,7 +27,7 @@ let generateShop =()=>{
                     
                 </div> 
             
-                <span class="v5_118"><a href="${product}.html">ORIGINALS</a></span> 
+                <span class="v5_118 hover-color"><a href="${product}.html">ORIGINALS</a></span> 
     
                 
         </div>

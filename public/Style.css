@@ -683,7 +683,7 @@ th:last-child{
     background-color: grey;
     border-color: #282828;
 }
-.btn {
+.v5_110 .btn {
     color: grey;
     background-color: #282828;
     border-color: grey;
@@ -691,8 +691,7 @@ th:last-child{
     font-weight: Regular;
     font-size: 16px;
     opacity: 1;
-    /* text-align: center; */
-    display: flex;
+    text-align: center; 
     transition: background 0s;
   }
 .btn:hover{
@@ -758,17 +757,16 @@ th:last-child{
 
   .v5_118 {
     font-size: 14px;
-    /* color: grey; */
+    color: grey; 
     position: relative;
-    top: -20px;
+    top: -20px; 
     /* left: 205px; */
     font-family: Inter;
     font-weight: Bold;
     opacity: 1;
-    text-align: left;
   }
 
- .v5_110:hover /*.click-text */
+ .v5_110:hover
 /* .hover-color:hover */
 {
     display:block;
@@ -778,11 +776,12 @@ th:last-child{
     backdrop-filter: blur(6.9px);
     -webkit-backdrop-filter: blur(6.9px); */
     cursor: pointer;
-    text-decoration-line: underline;
      
-} 
-.v5_110:hover .btn{
-    display: block;
+}
+.v5_110:hover p{
+    /* display: block;
+    color: #5f3bff; */
+    text-decoration-line: underline;
 }
 /* cart page styling */
 
