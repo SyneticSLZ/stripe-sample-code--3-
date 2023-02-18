@@ -5,12 +5,11 @@ let basket = JSON.parse(localStorage.getItem("data")) || [];
 let price = "price_1MXSxGKJeZAyw8f48U3ApmwS"
 
 let generateitem = ()=>{
-
     addtocartbutton.innerHTML = `
 
     <div id="${price}" class="addtocart" >
                     
-        <a href="Cart.html" onclick="increment(${price})" class="btn addtocart" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add to Cart</a>
+        <a href="Cart.html" onclick="increment(${price})" class="btn addtocart" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add To Cart</a>
                     
     </div> 
 
@@ -65,7 +64,7 @@ let increment = (price)=>{
     update(selectedItem.id);
 
     localStorage.setItem("data", JSON.stringify(basket))
-    console.log("added ")
+    console.log("added tshirt")
 };
 
 

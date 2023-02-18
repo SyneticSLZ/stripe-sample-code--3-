@@ -65,7 +65,7 @@ let increment = (price)=>{
     update(selectedItem.id);
 
     localStorage.setItem("data", JSON.stringify(basket))
-    console.log("added ")
+    console.log("added j")
 };
 
 
