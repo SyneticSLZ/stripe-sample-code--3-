@@ -10,7 +10,7 @@ let generateitem = ()=>{
 
     <div id="${price}" class="addtocart" >
                     
-        <a href="cart.html" onclick="increment(${price})" class="btn addtocart" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add to Cart</a>
+        <a href="Cart.html" onclick="increment(${price})" class="btn addtocart" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add to Cart</a>
                     
     </div> 
 
