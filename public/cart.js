@@ -91,7 +91,7 @@ let clearCart = ()=>{
 
 let calculation =()=>{
     let cartIcon = document.getElementById("cart-amount")
-    cartIcon.innerHTML = basket.map( (x)=> x.quantity ).reduce((x,y)=> x + y ,0);
+    cartIcon = basket.map( (x)=> x.quantity ).reduce((x,y)=> x + y ,0);
     
 }
 
@@ -140,7 +140,7 @@ let generateCartItems = ()=>{
             </td>
 
 
-            <td class="other-row"><span class="vsd" >£30.00</span></td>
+            <td class="other-row"><span class="vsd" >£${search.cost}</span></td>
 
 
             <td class="other-row">
