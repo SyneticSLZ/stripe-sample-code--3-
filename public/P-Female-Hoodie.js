@@ -2,7 +2,7 @@ let addtocartbutton = document.getElementById('add-to-cart');
 let buttontext = document.getElementsByClassName('addtocart')
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
-let price = "price_1MXSxGKJeZAyw8f48U3ApmwS"
+let price = "price_1MXSqUKJeZAyw8f46H1JNPHD"
 
 let generateitem = ()=>{
 

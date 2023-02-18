@@ -175,7 +175,7 @@ let generateCartItems = ()=>{
         Table.innerHTML = `
 
         <h2 class="title">Cart is empty</h2>
-        <a href="products.html" class="a">
+        <a href="index.html" class="a">
             <button class="btn"> back to shop </button>
         </a>
 
