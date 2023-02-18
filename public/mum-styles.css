@@ -1,0 +1,120 @@
+*{
+    box-sizing: border-box;
+    padding:0;
+    margin:0;
+    font-family: 'Source Sans Pro', sans-serif, ;
+    /* color: #1c3852; */
+    background-color: white;
+    color: #1c3852;
+    
+}
+
+.catalogue-page {
+  width: 75%;
+  padding:auto;
+ margin:auto;
+ text-align:centre;
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-between; 
+  align-items: center;
+  /* padding: 10px; 
+  flex-wrap: wrap; */
+}
+
+@media only screen and (max-width: 768px) {
+    /* for mobile phones */
+
+    .catalogue-page {
+    display: flex;
+    flex-direction: column;
+}
+}
+
+.product-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px;
+  margin: 20px;
+
+}
+
+/* .product-section:hover{
+
+ background: rgba(255, 255, 255, 0.469);
+ border-radius: 16px;
+ box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+ backdrop-filter: blur(5px);
+ -webkit-backdrop-filter: blur(5px);
+ border: 1px solid rgba(255, 255, 255, 0.12); 
+} */
+
+
+
+.product-image {
+  width: 100%;
+  /* content: url("images/product-5.jpg"); */
+}
+.product-image1 {
+  width: 100%;
+  display: none;
+  /* content: url("images/product-5.jpg"); */
+}
+.product-image:hover {
+  width: 100%;
+  /* display: none; */
+  content: url("images/product-7.jpg"); 
+  /* display:inline; */
+}
+.product-image1:hover {
+  width: 100%;
+  display:inline;
+  /* content: url("images/product-7.jpg"); */
+  /* display:inline; */
+}
+
+
+/* */
+
+.product-section:hover{
+    cursor: pointer;
+}
+
+
+.product-info {
+  padding-top: 1em;
+  width: 100%;
+  text-align: center;
+  /* padding-inline:4em;    180 × 226 px */
+}
+.brand {
+  font-size: 15px;
+  color: 
+  #8c8e90;
+}
+
+.product-name {
+  font-size: 15px;
+}
+.product-name:hover{
+    text-decoration: underline;
+}
+
+.product-fit {
+  font-size: 15px;
+  font-weight: italic;
+
+}
+.product-button {
+  background-color: rgb(19, 19, 19);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 20px;
+  display: inline-block;
+}

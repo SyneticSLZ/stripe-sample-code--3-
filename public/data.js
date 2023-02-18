@@ -3,49 +3,61 @@ let shopItemsData = [
     
         price: "price_1MXSxGKJeZAyw8f48U3ApmwS",
         name: "FEMALE T-SHIRT",
-        product: "P-Female-Tshirt",
+        size: "S",
+        product: "P-Female-Tshirt.html",
         cost: 15,
         desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-1.jpg"
+        image: "images/product-1.jpg",
+        himage: "images/product-5.jpg"
     },
     {
         price: "price_1MXSrDKJeZAyw8f4XZmQKGF4",
         name: "MENS HOODIE",
-        product: "P-Mens-Hoodie",
+        size: "S",
+        product: "P-Mens-Hoodie.html",
         cost: 45,
         desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-2.jpg"
+        image: "images/product-2.jpg",
+        himage: "images/product-5.jpg"
     },
     {
         price: "price_1MXSqUKJeZAyw8f46H1JNPHD",
         name: "FEMALE HOODIE",
-        product: "P-Female-Hoodie",
+        size: "S",
+        product: "P-Female-Hoodie.html",
         cost: 45,
         desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-3.jpg"
+        image: "images/product-3.jpg",
+        himage: "images/product-5.jpg"
     },
     {
         price: "price_1MXSfJKJeZAyw8f4LpeMgTl9",
         name: "MENS JEANS",
-        product: "P-Mens-Jeans",
+        size: "S",
+        product: "P-Mens-Jeans.html",
         cost: 30,
         desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-4.jpg"
+        image: "images/product-4.jpg",
+        himage: "images/product-5.jpg"
     },
     {
         price: "price_1MXSeyKJeZAyw8f4qfbHTGhc",
         name: "FEMALE JEANS",
-        product: "P-Female-Jeans",
+        size: "S",
+        product: "P-Female-Jeans.html",
         cost: 30,
         desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-4.jpg"
+        image: "images/product-5.jpg",
+        himage: "images/product-5.jpg"
     },
     {
         price: "price_1MQGCcKJeZAyw8f4y2agJhuS",
         name: "MENS T-SHIRT",
-        product: "P-Mens-Tshirt",
+        size: "S",
+        product: "P-Mens-Tshirt.html",
         cost: 30,
         desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-4.jpg"
+        image: "images/product-6.jpg",
+        himage: "images/product-5.jpg"
     },
   ];    

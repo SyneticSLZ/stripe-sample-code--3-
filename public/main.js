@@ -1,66 +1,41 @@
-let shop = document.getElementById('shop');
+let shop = document.getElementById('shopping');
 let buttontext = document.getElementsByClassName('addtocart')
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop =()=>{
     return (shop.innerHTML = shopItemsData.map((x)=>{
-        let {price,name,cost,desc,image,product} = x;
+        let {price,name,cost,desc,image,product,himage} = x;
         let search = basket.find((x)=>x.price === price) || [];
         return `
 
 
 
 
-        <div class="v5_110 col-3" id=product-id-${price}>
+        <!--<div class="v5_110 col-3" id=product-id-${price}>
       
                 <div class="v5_111" id=product-id-${price}></div>
                 
                 <div><span class="v5_112 hover-color">VARITY</span></div> 
                 <div class="v5_113"></div>
-                <p class="click-text" >CLICK TO VIEW</p>
                 <p class="hover-color" >${name}</p> 
                 
-                
-                <div id="${price}" class="addtocart" >
-                    
-                    <button onclick="increment(${price})" class="btn addtocart" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">ADD TO CART</button>
-                    
-                </div> 
+    
             
                 <span class="v5_118 hover-color"><a href="${product}.html">ORIGINALS</a></span> 
     
                 
-        </div>
+        </div> -->
 
+    <div class="product-section" id=product-id-${price}>
+      <img class="product-image" src="${image}" alt="Product Image">
+      <img class="product-image1" src="${himage}" alt="Product Image">
 
+      <div class="product-info">
+        <div class="brand">Varity ORIGINALS</div>
+        <div class="product-name"><a href="${product}"> ${name} </a></div>
+      </div>
+    </div>
 
-
-
-
-
-
-
-       <!-- <div id=product-id-${price} class="col-4 item">
-                <img src=${image} alt="">
-                <h4>${name}</h4>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
-                </div>
-                <p>${cost}</p>
-                <div class="buttons">
-                    <i onclick="increment(${price})" class=""bi bi-plus-square-dotted">+</i>
-                    <div id=${price}  class="quantity"> ${search.quantity === undefined? 0: search.quantity}</div>
-                    <i onclick="decrement(${price})" class="bi bi-dash-lg">-</i><br> 
-                    <button onclick="increment(${price})" class="btn" type="button">Add to cart</button>
-                </div>
-            </div> -->
-
-
-            
         `
     }).join(""));
 };

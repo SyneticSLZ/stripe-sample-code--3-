@@ -6,52 +6,6 @@ let CartContainer = document.getElementById("cart-page");
 
 
 let basket = JSON.parse(localStorage.getItem("data")) || [];
-
-let shopItemsData = [
-    {
-    
-        price: "price_1MXSxGKJeZAyw8f48U3ApmwS",
-        name: "FEMALE T-SHIRT",
-        cost: 15,
-        desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-1.jpg"
-    },
-    {
-        price: "price_1MXSrDKJeZAyw8f4XZmQKGF4",
-        name: "MENS HOODIE",
-        cost: 45,
-        desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-2.jpg"
-    },
-    {
-        price: "price_1MXSqUKJeZAyw8f46H1JNPHD",
-        name: "FEMALE HOODIE",
-        cost: 45,
-        desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-3.jpg"
-    },
-    {
-        price: "price_1MXSfJKJeZAyw8f4LpeMgTl9",
-        name: "MENS JEANS",
-        cost: 30,
-        desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-4.jpg"
-    },
-    {
-        price: "price_1MXSeyKJeZAyw8f4qfbHTGhc",
-        name: "FEMALE JEANS",
-        cost: 30,
-        desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-4.jpg"
-    },
-    {
-        price: "price_1MQGCcKJeZAyw8f4y2agJhuS",
-        name: "MENS T-SHIRT",
-        cost: 30,
-        desc: "lorem ispum dsofis aoafjpa",
-        image: "images/product-4.jpg"
-    },
-  ];    
   
   let increment = (price)=>{
     
@@ -81,9 +35,22 @@ let shopItemsData = [
 let decrement = (price)=>{
     let selectedItem = price;
     let search = basket.find((x)=>x.price === selectedItem.id)
-
-    if(!search) return;  /*=== undefined */
-    else if(search.quantity === 0) return;
+    console.log(!search)
+    if(!search) {
+        removeItem(price);
+        localStorage.setItem("data", JSON.stringify(basket));
+        generateCartItems();
+    totalAmount();
+    calculation();
+     /*=== undefined */
+    }
+    else if(search.quantity === 1) {
+        removeItem(price);
+        localStorage.setItem("data", JSON.stringify(basket));
+        generateCartItems();
+    totalAmount();
+    calculation();
+    }
     else{
         search.quantity -= 1; 
     }
@@ -91,11 +58,11 @@ let decrement = (price)=>{
     update(selectedItem.id);
 
     basket = basket.filter((x)=>x.quantity !== 0);
+    
+    localStorage.setItem("data", JSON.stringify(basket));
     generateCartItems();
     totalAmount();
     calculation();
-    
-    localStorage.setItem("data", JSON.stringify(basket));
 };
 
 let update = (price)=>{
@@ -138,7 +105,7 @@ let generateCartItems = ()=>{
             
             <span class="v5_92">My Cart</span>
             <div class="v5_91"></div>
-        `
+        `;
         Table.innerHTML = `
         
         <div class="top" id="top">
@@ -152,7 +119,7 @@ let generateCartItems = ()=>{
         </div>
         <div id="shopping-cart" class="shopping-cart">${(innerHTML= basket.map((x)=>{ 
             let {price, quantity} = x;
-            let search = shopItemsData.find((y)=>y.price === price) || []
+            let search = shopItemsData.find((y)=>y.price === price) || [];
             // console.log(search)
             return `
         <tr>
@@ -164,7 +131,7 @@ let generateCartItems = ()=>{
 
                     <div>
                         <p>${search.name}</p>
-                        <small>Ref:348326924698</small>
+                        <small>Size ${search.size}</small>
                         <br>
                     </div>
 
@@ -194,7 +161,7 @@ let generateCartItems = ()=>{
 
 
         </tr>
-
+            
        
         `
     }).join(""))}
@@ -223,7 +190,9 @@ generateCartItems();
 
 
 let totalAmount = () => {
-    if (basket.length !== 0) {
+
+    if(basket.length === 0) {return;}
+    else {
         let amount = basket.map((x) => {
             let { quantity, price } = x;
             let search = shopItemsData.find((y) => y.price === price) || [];
@@ -237,13 +206,16 @@ let totalAmount = () => {
         <tr><div class="verysmallcontainer">
             <div class="check"></div>
             <div><p>SubTotal £${amount}</p></div>
-            <div><button id="click" class="v5_117" onclick="getInfo()">Checkout</button></div>
-        </div></tr>
+
+            <button id="checkout-btn" class="v5_117" >Checkout</button>
+        </div>
+        
+        </tr>
 
 
 
 
-        <!-- <div class="total-price">
+        <!-- <div class="total-price">  onclick="getinfo()"  id="click"
 
         <table>
             <tr>
@@ -267,23 +239,24 @@ let totalAmount = () => {
             <tr><form action="/create-checkout-session" method="POST">
             <button type="submit" id="checkout-button">Checkout</button>
           </form></tr>
+
+          
         </table>
     </div> -->
 
         `;
     }
-    else return
     }
 totalAmount();
 
 
 const YOUR_DOMAIN = 'http://localhost:4242';
 
-const getBtn = document.getElementById('get')
+// const getBtn = document.getElementById('get')
 
-getBtn.addEventListener('click', getInfo)
+// getBtn.addEventListener('click', getInfo)
 
-async function getInfo(e) {
+// async function getInfo(e) {
 
     //console.log(JSON.stringify(basket))
     // const response = await fetch(YOUR_DOMAIN, {
@@ -296,13 +269,37 @@ async function getInfo(e) {
         
     // });
 
-    fetch("/create-checkout-session", {
-            method: 'POST',
+//     fetch("/create-checkout-session", {
+//             method: 'POST',
             
-            headers: {
-                'Accept': 'application/json',
-                'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(basket),
-    });
-}
+//             headers: {
+//                 'Accept': 'application/json',
+//                 'Content-Type': 'application/json'
+//             },
+//             body: JSON.stringify(basket),
+//     });
+// }
+
+
+const button = document.getElementById("checkout-btn")
+button.addEventListener("click", () => {
+    console.log("dhgudsgudgasdas")
+
+    fetch('/create-checkout-session', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            items: basket
+    }),
+
+    }).then(res => {
+        if (res.ok) return res.json()
+        return res.json().then(json => Promise.reject(json))
+    }).then(({ url }) => {
+        window.location =url
+    }).catch(e => {
+        console.error(e.error)
+    })
+})
