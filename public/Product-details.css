@@ -9,6 +9,9 @@
     color: #D4AF37;
     text-align: center;
 }
+.ignore{
+    display: none;
+}
 body{
     font-family: 'Unbounded', cursive;
     background-color: white;
