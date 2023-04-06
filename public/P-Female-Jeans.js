@@ -1,3 +1,4 @@
+
 let addtocartbutton = document.getElementById('add-to-cart');
 let buttontext = document.getElementsByClassName('addtocart')
 let basket = JSON.parse(localStorage.getItem("data")) || [];
