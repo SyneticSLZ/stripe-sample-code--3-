@@ -1,4 +1,4 @@
-
+var parralax = true
 let addtocartbutton = document.getElementById('add-to-cart');
 let buttontext = document.getElementsByClassName('addtocart')
 let basket = JSON.parse(localStorage.getItem("data")) || [];
@@ -141,3 +141,76 @@ calculation();
  SmallImg[3].onclick = function(){
      ProductImg.src = SmallImg[3].src;
  }
+
+ function splitscroll(){
+    const controller = new ScrollMagic.Controller();
+
+    new ScrollMagic.Scene({
+        duration: '100%',
+        triggerElement: '.about-title',
+        triggerHook: 0
+    })
+    .setPin('.about-title')
+    // .addIndicators()
+    .addTo(controller);
+}
+
+    splitscroll();
+// Get DOM elements
+const titleElement = document.querySelector('.title');
+const plusButtonElement = document.getElementById('plusButton');
+const contentBoxElement = document.getElementById('contentBox');
+const uparrow = document.getElementById('up');
+const downarrow = document.getElementById('down');
+const contentTextAreaElement = document.getElementById('contentTextArea');
+const saveButtonElement = document.getElementById('contentTextArea');
+
+// Add event listener to plus button
+plusButtonElement.addEventListener('click', () => {
+  // Toggle display of content box
+  contentBoxElement.style.display = contentBoxElement.style.display === 'none' ? 'block' : 'none';
+  uparrow.style.display = uparrow.style.display === 'none' ? 'block' : 'none';
+  downarrow.style.display = downarrow.style.display === 'block' ? 'none' : 'block';
+});
+
+// Add event listener to save button
+saveButtonElement.addEventListener('click', () => {
+  // Get content from textarea
+  const content = contentTextAreaElement.value;
+  
+  // Do something with the content (e.g., save to server)
+  console.log(`Content: ${content}`);
+  
+  // Hide content box
+  contentBoxElement.style.display = 'none';
+//   downarrow.style.display = downarrow.style.display === 'none' ? 'block' : 'none';
+});
+
+// Get the button element
+const smallbtn = document.getElementById('s');
+const mediumbtn = document.getElementById('m');
+const largebtn = document.getElementById('l');
+
+ // Add click event listener to the button
+ smallbtn.addEventListener('click', function() {
+    // Toggle the 'clicked' class to change the styling
+    smallbtn.classList.toggle('clicked');
+    mediumbtn.classList.remove('clicked');
+    largebtn.classList.remove('clicked');
+  });
+
+ // Add click event listener to the button
+ mediumbtn.addEventListener('click', function() {
+    // Toggle the 'clicked' class to change the styling
+    mediumbtn.classList.toggle('clicked');
+    largebtn.classList.remove('clicked');
+    smallbtn.classList.remove('clicked');
+  });
+
+ // Add click event listener to the button
+ largebtn.addEventListener('click', function() {
+    // Toggle the 'clicked' class to change the styling
+    largebtn.classList.toggle('clicked');
+    smallbtn.classList.remove('clicked');
+    mediumbtn.classList.remove('clicked');
+  });

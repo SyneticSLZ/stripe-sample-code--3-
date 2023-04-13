@@ -1,0 +1,57 @@
+header{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom,black,black);
+    background-size: cover;
+    color: aliceblue;
+}
+.about{
+    height: 300vh;
+    display:flex;
+
+}
+.about-title{
+    width: 50%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 0!important;
+}
+.about-pages{
+    width:50%;
+}
+.about-pages .aboutdiv{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: aliceblue;
+}
+
+.about-pages .aboutdiv> p{
+    width: 80%;
+    font-size: 18px;
+    line-height: 30px;
+}
+.about-pages div:nth-child(1){
+    background-color: green;
+}
+.about-pages div:nth-child(2){
+    background-color: red;
+}
+.about-pages div:nth-child(3){
+    background-color: teal;
+}
+footer{
+    height: 100vh;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color: aquamarine;
+}
+

@@ -22,105 +22,168 @@
 <!----Single product details -----> 
 <div class="single-prod-details">
 
+
+
+
+
+
+
+
+
+
+
     <div class="single-product">
 
-        <div class="row">
+        <section class="about"> <!--row-->
 
-            <div class="col-2">
-                <img src="images/gallery-1.jpg" width="60%" height = "60%" id="ProductImg">
-                 <!--change back to id ProductImg for normal-->
-                <div id="Container3D" width="60%" height = "60%"></div>
-            </div>
-            <div class="col-2 "><div class="details-container">
-                <div class="name">
-                    <div class="product-info">
-                        <div class="brand">Varity ORIGINALS</div>
-                        <div class="product-name">Logo Striped Fleece Hoodie</div>
-                        <div class="product-price">$100</div>
-                    </div>
-                        <p class="delivery">Complimentary standard delivery on all orders <br>DETAILS</p>
-                </div>
+            <!--LHS about-title -->
+            <div class="about-title">
+                <img src="images/gallery-1.jpg" width="70%" height="70%"id="ProductImg">
                 
-                <div class="line"></div><br><br>
-                    
-                    <div class="small-img-row">
-                        <div class="small-img-col">
-                            <img src="images/gallery-1.jpg" width="100%" class="small-img">
-                        </div>
-                        <div class="small-img-col">
-                            <img src="images/gallery-2.jpg" width="100%"class="small-img">
-                        </div>
-                        <div class="small-img-col">
-                            <img src="images/gallery-3.jpg" width="100%" height="100%" class="small-img">
-                        </div>
-                        <div class="small-img-col">
-                            <img src="images/gallery-4.jpg" width="100%"class="small-img">
-                        </div>
-                    </div>
-
-                <div class="size">
-                    <div class="line"></div>
-
-                    <div class="select-size">
-                        <a href="" class="details-col-3">Small</a>
-                        <a href="" class="details-col-3">Medium</a>
-                        <a href="" class="details-col-3">Large</a>
-                    </div>
-
-                    <p>Size Chart</p>
-
-                    <div id="add-to-cart">
-                    </div>
-                </div>    
+                            
+                            <div class="small-img-row">
+                                <div class="small-img-col">
+                                    <img src="images/gallery-1.jpg" width="100%" class="small-img">
+                                </div>
+                                <div class="small-img-col">
+                                    <img src="images/gallery-2.jpg" width="100%"class="small-img">
+                                </div>
+                                <div class="small-img-col">
+                                    <img src="images/gallery-3.jpg" width="100%" class="small-img">
+                                </div>
+                                <div class="small-img-col">
+                                    <img src="images/gallery-4.jpg" width="100%"class="small-img">
+                                </div>
+                            </div>
             </div>
-        </div>
+
+            <div class="about-pages">
+
+                <!----Single product details -----> 
+                <div class="aboutdiv">
+                <div class="col-2 ">
+                    <div class="details-container">
+                        <div class="name">
+                            <div class="product-info">
+                                <div class="brand">Varity ORIGINALS</div>
+                                <div class="product-name">Logo Striped Fleece Hoodie</div>
+                                <div class="product-price">$100</div>
+                            </div>
+                                <!-- <p class="delivery">Complimentary standard delivery on all orders <br>DETAILS</p> -->
+
+                                <header class="header" id="plusButton">
+                                    <div class="header-title">
+                                        <div class="description-arrow">
+                                    <div class="title">Description</div>
+                                  <div class="plus-button down" id="down"><img src="images/down-arrow (2).png" width="100%" height="100%"></img></div>
+                                  <div class="plus-button up" id="up"><img src="images/arrow-up (1).png" width="100%" height="100%"></img></div>
+                                        </div>
+                                  <div id="contentBox" class="content-box">
+                                    <!-- <p id="contentTextArea" class="content-textarea">Be the best version of you with this must-have hoodie in your wardrobe. Get yours now and unleash your true potential!
+
+
+
+                                    </p> -->
+                                    <textarea id="contentTextArea" class="content-textarea"></textarea>
+                                    
+                                  </div>
+                                    </div>
+                                </header>
+                        
+                        
+                        
+                        <div class="size">
+                            <div class="description-arrow">
+                                <div class="size-guide">
+                                    <h5>Select Size</h5>
+                                </div>
+                                <div class="size-chart"><p>Size Chart</p></div>
+                            </div>
+                            
+
+                            <div class="select-size">
+                                <div id="s" class="details-col-3">S</div>
+                                <div id="m" class="details-col-3">M</div>
+                                <div id="l" class="details-col-3">L</div>
+                            </div>
+
+                             
+                        </div>
+                            <div id="add-to-cart">
+                            </div>
+                     
+                        
+                        
+                        </div> 
+                    </div>
+                </div>
+                </div>
+
+                <!----Single product specs -----> 
+                <div class="aboutdiv single-prod-desc">
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="details-container">
+                            <div class="tab-container">
+
+                                <div class="tab active" id="description-tab">Description</div>
+                                <div class="tab" id="specifications-tab">Specifications</div>
+                            </div>
+
+                            <div class="tab-content active" id="description-content">
+                                
+                                <h3>Product Details</h3>
+                            <br>
+                            <p>Vey cool products please buy me i want to be bought very cheap and good quality please buy me :)</p>
+                            <div class="product-specifications">
+                                <div class="specification">
+                                <div class="specification-title">Brand</div>
+                                Brand Name
+                                </div>
+                                <div class="specification">
+                                <div class="specification-title">Material</div>
+                                Material Name
+                                </div>
+                                <div class="specification">
+                                <div class="specification-title">Color</div>
+                                Color Name
+                                </div>
+                            </div> 
+
+                            </div>
+                            <div class="tab-content" id="specifications-content">
+                                
+                                <h3>Product Details</h3>
+                            <br>
+                            <p>Vey cool products please buy me i want to be bought very cheap and good quality please buy me :)</p>
+                            <div class="product-specifications">
+                                <div class="specification">
+                                <div class="specification-title">Brand</div>
+                                Lorem ipsum dolor sit amet.
+                                </div>
+                                <div class="specification">
+                                <div class="specification-title">Material</div>
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo, minus.
+                                </div>
+                                <div class="specification">
+                                <div class="specification-title">Color</div>
+                                Color Name
+                                </div>
+                            </div> 
+
+                            </div>
+                            <!-- <div class="tab-content" id="specifications-content">
+                                <p>Brand: Brand Name</p>
+                                <p>Material: Material Name</p>
+                                <p>Color: Color Name</p>
+                            </div> -->
+                    </div></div></div>
+
+                </div>
+
+            </div>
+        </section>
     </div>
-</div>
-<!----Single product description ----->
-<div class="single-prod-desc">
-        <div class="row">
-            <div class="col-2">
-                <img src="images/gallery-1.jpg" width="60%" height = "60%" id="ProductImg">
-            </div>
-
-            <div class="col-2">
-                <div class="details-container">
-                  <div class="tab-container">
-
-                    <div class="tab active" id="description-tab">Description</div>
-                    <div class="tab" id="specifications-tab">Specifications</div>
-                  </div>
-
-                  <div class="tab-content active" id="description-content">
-                    
-                    <h3>Product Details</h3>
-                <br>
-                <p>Vey cool products please buy me i want to be bought very cheap and good quality please buy me :)</p>
-                <div class="product-specifications">
-                    <div class="specification">
-                      <div class="specification-title">Brand</div>
-                      Brand Name
-                    </div>
-                    <div class="specification">
-                      <div class="specification-title">Material</div>
-                      Material Name
-                    </div>
-                    <div class="specification">
-                      <div class="specification-title">Color</div>
-                      Color Name
-                    </div>
-                  </div> 
-
-                  </div>
-
-                  <div class="tab-content" id="specifications-content">
-                    <p>Brand: Brand Name</p>
-                    <p>Material: Material Name</p>
-                    <p>Color: Color Name</p>
-                  </div>
-        </div></div></div>
-
-</div>
     <!------ featured categories ------>
     <div class="categories">
         <div class="categories-container">
@@ -156,86 +219,88 @@
         </div>
     </div>
 
-<!------ testimonal ------>
-<div class="testimonial">
-    <div class="categories-container">
-        <div class="categories-row">
+    <!------ testimonal ------>
+    <div class="testimonial">
+        <div class="categories-container">
+            <div class="categories-row">
 
-            <div class="categories-col-3">
-                <i class="categories-fa fa-quote-Left"></i>
-                <p>With the online text generator blah blah
-                youefine its structure</p>
-                <div class="categories-rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
+                <div class="categories-col-3">
+                    <i class="categories-fa fa-quote-Left"></i>
+                    <p>With the online text generator blah blah
+                    youefine its structure</p>
+                    <div class="categories-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <img src="images/user-1.png" alt="">
+                    <h3>Sean Parker</h3>
                 </div>
-                <img src="images/user-1.png" alt="">
-                <h3>Sean Parker</h3>
-            </div>
 
-            <div class="categories-col-3">
-                <i class="categories-fa fa-quote-Left"></i>
-                <p>With the online text generator blah blah
-                youefine its structure</p>
-                <div class="categories-rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
+                <div class="categories-col-3">
+                    <i class="categories-fa fa-quote-Left"></i>
+                    <p>With the online text generator blah blah
+                    youefine its structure</p>
+                    <div class="categories-rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <img src="images/user-2.png" alt="">
+                    <h3>Sean Parker</h3>
                 </div>
-                <img src="images/user-2.png" alt="">
-                <h3>Sean Parker</h3>
-            </div>
 
-            <div class="categories-col-3">
-                <i class="fa fa-quote-Left"></i>
-                <p>With the online text generator blah blah
-                youefine its structure</p>
-                <div class="rating">
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star"></i>
-                    <i class="fa fa-star-o"></i>
+                <div class="categories-col-3">
+                    <i class="fa fa-quote-Left"></i>
+                    <p>With the online text generator blah blah
+                    youefine its structure</p>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                    </div>
+                    <img src="images/user-3.png" alt="">
+                    <h3>Sean Parker</h3>
                 </div>
-                <img src="images/user-3.png" alt="">
-                <h3>Sean Parker</h3>
-            </div>
 
-        </div>
-    </div>
-</div>
-
-<!-----brands----->
-<div class="brands">
-    <div class="categories-container">
-        <div class="categories-row">
-            <div class="col-5">
-                <img src="images/logo-godrej.png" alt="">
-            </div>
-            <div class="col-5">
-                <img src="images/logo-coca-cola.png" alt="">
-            </div>
-            <div class="col-5">
-                <img src="images/logo-oppo.png" alt="">
-            </div>
-            <div class="col-5">
-                <img src="images/logo-paypal.png" alt="">
-            </div>
-            <div class="col-5">
-                <img src="images/logo-philips.png" alt="">
             </div>
         </div>
     </div>
-</div>
+
+    <!-----brands----->
+    <div class="brands">
+        <div class="categories-container">
+            <div class="categories-row">
+                <div class="col-5">
+                    <img src="images/logo-godrej.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-coca-cola.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-oppo.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-paypal.png" alt="">
+                </div>
+                <div class="col-5">
+                    <img src="images/logo-philips.png" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
         
 
-    </div>
-
-</body>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/debug.addIndicators.min.js"></script>
 <script src="P-Female-Jeans.js"></script>
+</body>
+
 </html>
