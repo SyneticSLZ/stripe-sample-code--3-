@@ -106,9 +106,11 @@ a{
     display:flex;
 
 }
+.newdetails{
+    display: none;
+}
 .about-title{
-
-    width: 50%;
+    width: 100%;
     height: 100vh;
     display: flex;
     flex-wrap: wrap; 
@@ -118,9 +120,19 @@ a{
     margin: 0!important;
     
 }
-
+.about-title-parralax{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap; 
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    margin: 0!important;
+    
+}
 .about-pages{
-    width:50%;
+    width: 100%;
 }
 .aboutdiv{
     height: 100vh;
@@ -303,6 +315,23 @@ a{
         color: white;
         border: solid white 3px;
 }
+.hi .btn{
+    display:inline-block;
+    background-color: #7b0026;
+    color: #f1f1f1f1; 
+    /* border: solid 3px black; */
+    padding: 8px 30px;
+    margin: 2em 0;
+    border-radius: 10px;
+    width: 100%;
+    text-decoration: none;
+    /* transition: background 0.7s; */
+}
+.hi .btn:hover{
+
+    color: white;
+    border: solid white 3px;
+}
 .product-name{
     font-size: 30px;
 }
@@ -475,24 +504,45 @@ a{
 }
 
 /*---media query for less than 600 screen size--*/
-@media only screen and (max-width: 1065px){
+@media only screen and (max-width: 800px){
     .single-prod-details{
-        border: #1111b8 5px solid;
+        /* border: #11b83e 5px solid; */
+        padding:5px;
         display: flex;
+        flex-basis: 100%;
         flex-direction: column;
         
     }
     .about{
-        display:inline-block;
+        display:inline-block; 
         justify-content: center;
         align-items: center;
+        /* border: #11b83e 5px solid; */
+        padding:5px;
+        display: flex;
+        flex-basis: 100%;
     }
     .about-pages{
-        width:100%;
+        display: none; 
+    }
+    .newdetails{
+        display: block;
     }
     .about-title {
-        border: #b81111 5px solid;
-
+        /* border: #b81111 5px solid; */
+        /* display: flex;
+        flex-basis: 100%; */
+        
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap; 
+            justify-content: center;
+            align-items: center;
+            font-size: 30px;
+            margin: 0!important;
+            
+        
     } 
     .row, .page-btn{
         text-align: center;

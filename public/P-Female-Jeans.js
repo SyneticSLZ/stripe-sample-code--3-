@@ -1,5 +1,6 @@
 var parralax = true
 let addtocartbutton = document.getElementById('add-to-cart');
+let addtocartbutton2 = document.getElementById('add-to-cart2');
 let buttontext = document.getElementsByClassName('addtocart')
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
@@ -8,6 +9,16 @@ let price = "price_1MXSeyKJeZAyw8f4qfbHTGhc"
 let generateitem = ()=>{
 
     addtocartbutton.innerHTML = `
+
+    <div id="${price}" class="addtocart" >
+                    
+        <a href="Cart.html" onclick="increment(${price})" class="btn addtocart" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">Add to Cart</a>
+                    
+    </div> 
+
+
+    `;
+    addtocartbutton2.innerHTML = `
 
     <div id="${price}" class="addtocart" >
                     
@@ -154,8 +165,33 @@ calculation();
     // .addIndicators()
     .addTo(controller);
 }
+splitscroll();
 
-    splitscroll();
+// JavaScript code
+// function checkScreenSize() {
+//     // Get the viewport width
+//     var viewportWidth = window.innerWidth || document.documentElement.clientWidth;
+    
+//     // Check if the viewport width is less than 600px
+//     if (viewportWidth < 600) {
+//       // Remove the class from the div
+//     //   document.getElementById('parallax').classList.remove('about-title-parralax');
+//     //   document.getElementById('parallax').classList.add('about-title');
+//     } else {
+//       // Add the class to the div
+//     //   document.getElementById('parallax').classList.remove('about-title');
+//     //   document.getElementById('parallax').classList.add('about-title-parralax');
+//       splitscroll();
+//     }
+//   }
+  
+  // Call the function initially
+//   checkScreenSize();
+  
+  // Add an event listener for window resize
+  window.addEventListener('resize', checkScreenSize);
+
+  
 // Get DOM elements
 const titleElement = document.querySelector('.title');
 const plusButtonElement = document.getElementById('plusButton');
