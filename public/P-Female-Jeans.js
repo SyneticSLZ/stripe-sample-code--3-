@@ -164,8 +164,25 @@ calculation();
     .setPin('.about-title')
     // .addIndicators()
     .addTo(controller);
+    if (window.innerWidth < 800) {
+      // Exit function if screen width is below 800px
+      return;
+    }
 }
+
 splitscroll();
+// Add an event listener for window resize
+// Call your function on window resize
+// window.addEventListener('resize', function() {
+//   // Call your function on window resize
+//   splitscroll();
+// }
+// window.addEventListener('resize', splitscroll(), {
+//   // Call your function on window resize
+//   function(){
+//     splitscroll();
+//   }
+// });
 
 // JavaScript code
 // function checkScreenSize() {
@@ -189,7 +206,7 @@ splitscroll();
 //   checkScreenSize();
   
   // Add an event listener for window resize
-  window.addEventListener('resize', checkScreenSize);
+  // window.addEventListener('resize', checkScreenSize);
 
   
 // Get DOM elements
