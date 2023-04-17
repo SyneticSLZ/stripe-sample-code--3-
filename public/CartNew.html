@@ -6,16 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Cart | Varity </title>
     <link rel="stylesheet" href="Cart.css" type="text/css">
+    <script defer src="https://js.stripe.com/v3/"></script>
     <link href='https://fonts.googleapis.com/css?family=Mulish' rel='stylesheet'>
 </head>
 <body>
-    <div class="cart-container">
+<div class="cart-container" id="cart-container">
     <div class="bag-total">
-        <h2 class="total">Your bag total is £1,948.00.</h2>
-        <div class="check-out">Check Out</div>
+        <h2 class="total">Your bag total is <div id="TotalAmount">£1,948.00.</div></h2>
+        <div class="check-out" id="checkout-btn">Check Out</div>
     </div>
     <table>
-        <div class="cart-product">
+    <table id="table" class="table">
+        <!-- <div class="cart-product">
 
             <div class="cart-img">
                 <img src="images/pngwing.com (5).png" width="90%" height="70%">
@@ -32,6 +34,19 @@
                         <img src="images/down-arrow (1).png" width="15px" height="15px">
                     </div>
 
+
+                    <div class="select" id="select">
+                        <span id="quantityValue">0</span>
+                        <img src="images/down-arrow (1).png" width="15px" height="15px" alt="Dropdown Icon" id="dropdownIcon">
+                        <select id="quantitySelect">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                        </select>
+                        <input type="number" id="quantityInput" min="1" max="9999" step="1" pattern="\d+" value="1" style="display: none;">
+                    </div>
+                
                     <div class="price-remove">
                         
                         <div class="price">£849.00</div>
@@ -87,12 +102,12 @@
                 </div>
             </div>
 
-        </div>
-
+        </div> -->
+    </table>
         <div class="checkout-container">
             <div class="subtotal">
                 <div class="sub">Subtotal</div>
-                <div class="cost">£1,948.00</div>
+                <div class="cost" id="subtotal">£1,948.00</div>
             </div>
             <div class="shipping">
                 <div class="ship">Shipping</div>
@@ -100,12 +115,13 @@
             </div>
             <div class="total-amount">
                 <div class="tl">Total</div>
-                <div class="total-cost">£1,948.00</div>
+                <div class="total-cost TA" id="FinalCost">£1,948.00</div>
             </div>
             <div class="vat">Includes VAT of £324.67</div>
-            <div class="check-out">Check Out</div>
+            <div class="check-out" id="checkout-btn">Check Out</div>
         </div>
-    </table>
+    
+</table>
 </div>
 <div class="footer">
     <div class="copyright">Copyright © 2023 Varity Inc. All rights reserved.</div>
@@ -120,4 +136,6 @@
     <div class="region">UK</div>
 </div>
 </body>
+<script src="data.js"></script>
+<script src="cartNew.js" defer async></script>
 </html>

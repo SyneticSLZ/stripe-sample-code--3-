@@ -21,7 +21,9 @@
   }
 body{
     font-family: 'Mulish';
-    background-color: white;
+    background-color: rgba(10, 10, 10, 0.616);
+    color:#f1f1f1f1;
+    /* background-color: white; */
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -112,13 +114,65 @@ table{
     font-size: 20px;
     width: 60%;
 }
+
 .select{
     font-weight: lighter;
     font-size: 25px;
-    width: 20%;
+    width: 15%;
     align-items: start; 
+    display: inline-block;
+    
 }
-
+select{
+    /* background-color: #f5f5f5; */
+    border: none;
+    border-right: none;
+    font-weight: lighter;
+    font-size: 25px;
+    width: 80%;
+    align-items: start; 
+    display: inline-block;
+}
+input{
+    display: none;
+}
+#quantityValue {
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+    cursor: pointer;
+  }
+  
+  #dropdownIcon {
+    background-image: url("images/down-arrow\ \(1\).png");
+    position: absolute;
+    /* right: 5px; */
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    pointer-events: none;
+  }
+  
+  /* #quantityInput {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #f5f5f5;
+    font-size: 16px;
+    text-align: center;
+    display: none;
+  } */
+  
+  select {
+    cursor: pointer;
+  }
+  
 .price-remove{
     display: flex;
     flex-direction: column;
@@ -181,7 +235,7 @@ table{
    padding-top: 1em;
 }
 .vat{
-    color: rgb(125, 124, 124);
+    color: rgb(224, 224, 224);
     font-size: smaller;
     font-weight: lighter;
     padding-bottom: 2em;
@@ -196,7 +250,8 @@ table{
     font-size: 12px;
 }
 .copyright{
-    color: rgb(125, 124, 124);
+    color: rgb(224, 224, 224);
+    
     /* width: 30%; */
 }
 /* .flinks{
@@ -206,11 +261,11 @@ table{
 } */
 .footer-links{
     text-align: center;
-    color: rgb(90, 90, 90);
+    color: rgb(224, 224, 224);
     padding-left: 0.5em;
     padding-right: 0.5em;
-    border-left: rgb(90,90,90) 0.1px solid ;
-    border-right: rgb(90,90,90) 0.1px solid ;
+    border-left: rgb(224, 224, 224) 0.1px solid ;
+    border-right: rgb(224, 224, 224) 0.1px solid ;
 }
 
 .footer-links:hover{
@@ -277,6 +332,7 @@ table{
     .delivery{
         padding-top: 1em;
         padding-bottom: 1em;
+        /* width: 100%; */
     }
     .subtotal , .shipping, .total-amount{
         width: 90%;
