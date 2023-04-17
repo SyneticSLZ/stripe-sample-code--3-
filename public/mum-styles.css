@@ -4,8 +4,8 @@
     margin:0;
     font-family: 'Source Sans Pro', sans-serif, ;
     /* color: #1c3852; */
-    background-color: rgba(10, 10, 10, 0.616);
-    color: #1c3852;
+    background-color: rgba(10, 10, 10);
+    color: red;
     
 }
 
@@ -13,7 +13,7 @@
   width: 75%;
   padding:auto;
  margin:auto;
- text-align:centre;
+ text-align:center;
   display: grid;
   grid-template-columns: auto auto auto;
   justify-content: space-between; 
@@ -109,7 +109,7 @@
 
 }
 .product-button {
-  background-color: rgb(19, 19, 19);
+  /* background-color: rgba(10, 10, 10, 0.616); */
   color: white;
   padding: 10px 20px;
   border-radius: 5px;
