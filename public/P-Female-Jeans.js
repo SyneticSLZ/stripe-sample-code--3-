@@ -139,17 +139,29 @@ calculation();
  
  var ProductImg = document.getElementById("ProductImg");
  var SmallImg = document.getElementsByClassName("small-img");
+ var Threed = document.getElementById("about-title");
 
  SmallImg[0].onclick = function(){
-     ProductImg.src = SmallImg[0].src;
+  Threed.style.display = "flex";
+  Threed.style.visibility = "visible";
+  ProductImg.style.display = 'none';
  }
  SmallImg[1].onclick = function(){
+  Threed.style.display = "none";
+  Threed.style.visibility = "hidden";
+  ProductImg.style.display = 'block';
      ProductImg.src = SmallImg[1].src;
  }
  SmallImg[2].onclick = function(){
+  Threed.style.display = "none";
+  Threed.style.visibility = "hidden";
+  ProductImg.style.display = "block";
      ProductImg.src = SmallImg[2].src;
  }
  SmallImg[3].onclick = function(){
+  Threed.style.display = "none";
+  Threed.style.visibility = "hidden";
+  ProductImg.style.display = 'block';
      ProductImg.src = SmallImg[3].src;
  }
 

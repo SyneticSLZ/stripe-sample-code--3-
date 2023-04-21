@@ -11,7 +11,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css">
-</head>
+    <!-- <script type="module" src"https://cdn.skypack.dev/three@0.136.0">
+    </script> -->
+      <!-- <script type="module" src="https://cdn.rawgit.com/mrdoob/three.js/master/examples/js/loaders/GLTFLoader.js"></script> -->
+      <script  type="module"  src="three.js"></script>
+    </head>
 <body>
 
     <div class="ignore">
@@ -30,12 +34,13 @@
 
             <!--LHS about-title -->
             <div class="about-title" id="parallax">
-                <img src="images/gallery-1.jpg" width="70%" height="70%"id="ProductImg">
+                <img src="images/gallery-1.jpg" width="70%" height="70%" id="ProductImg">
+                <div id="about-title"></div>
                 
                             
                             <div class="small-img-row">
                                 <div class="small-img-col">
-                                    <img src="images/gallery-1.jpg" width="100%" class="small-img">
+                                    <img src="images\Screenshot 2023-04-21 211453.png" width="100%" class="small-img">
                                 </div>
                                 <div class="small-img-col">
                                     <img src="images/gallery-2.jpg" width="100%"class="small-img">
