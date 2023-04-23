@@ -22,7 +22,8 @@
 
 body{
     font-family: 'Unbounded', cursive;
-    background-color: rgba(10, 10, 10, 0.616);
+    /* background-color: rgba(10, 10, 10, 0.616); */
+    background-color: rgba(10, 10, 10, 1);
     color: #fafafa;
     display:flex;
     align-items: center;
