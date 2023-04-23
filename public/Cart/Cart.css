@@ -133,7 +133,7 @@ select{
     width: 80%;
     align-items: start; 
     display: inline-block;
-    background-color: rgba(10, 10, 10, 0.616);
+    background-color: transparent;
     color:#f1f1f1f1;
 }
 input{
@@ -188,6 +188,7 @@ input{
 }
 .remove{
     color: #b30000;
+    cursor: pointer;
 }
 .delivery{
     border-top: rgb(228, 224, 224) 0.1px solid;

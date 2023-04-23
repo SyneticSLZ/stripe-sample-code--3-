@@ -131,7 +131,7 @@ let generateCartItems = ()=>{
 
                         <!--<div class="select" id="select">
                             <span id="quantityValue">0</span>
-                            <img src="images/down-arrow (1).png" width="15px" height="15px" alt="Dropdown Icon" id="dropdownIcon">
+                            <img src="../images/down-arrow (1).png" width="15px" height="15px" alt="Dropdown Icon" id="dropdownIcon">
                             <select id="quantitySelect">
                                 <option value="0" onclick="removeItem(${price})">0</option>
                                 <option value="1" onclick="selectq(${price})">1</option>
@@ -151,7 +151,7 @@ let generateCartItems = ()=>{
                 </div>
                 <div class="delivery">
                     <div class="delivery-icon">
-                        <img src="images/box.png" height="80%" width="100%">
+                        <img src="../images/box.png" height="80%" width="100%">
                     </div>
                     <div class="col">
                         <div>Order today</div>
