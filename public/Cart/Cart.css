@@ -21,7 +21,7 @@
   }
 body{
     font-family: 'Mulish';
-    background-color: rgba(10, 10, 10, 0.616);
+    background-color: transparent;
     color:#f1f1f1f1;
     /* background-color: white; */
     display: flex;
