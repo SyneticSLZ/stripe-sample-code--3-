@@ -27,7 +27,7 @@ let shopItemsData = [
         product: "../Products/P-Female-Hoodie.html",
         cost: 45,
         desc: "lorem ispum dsofis aoafjpa",
-        image: "../images/product-3.jpg",
+        image: "../images/product-4.jpg",
         himage: "../images/product-5.jpg"
     },
     {
