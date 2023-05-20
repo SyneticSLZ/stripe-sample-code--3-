@@ -5,7 +5,7 @@
     font-family: 'Inter';
     /* color: #1c3852; */
     background-color: transparent;
-    color: black;
+    color: rgb(206, 192, 192);
     /* background-color: #E9EAF8; */
     
 }
@@ -139,7 +139,7 @@
   border: rgb(0, 0, 0) 3px solid; 
   background-color: #E9EAF8;
   padding: 10px 20px;
-  color: black;
+  color: rgb(214, 210, 210);
   border-radius: 150px;
   text-align: center;
   text-decoration: none;
