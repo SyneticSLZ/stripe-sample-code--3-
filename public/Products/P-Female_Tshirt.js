@@ -1,5 +1,5 @@
 let addtocartbutton = document.getElementById('add-to-cart');
-let buttontext = document.getElementsByClassName('addtocart')
+let buttontext = document.getElementsByclass('addtocart')
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let price = "price_1MXSxGKJeZAyw8f48U3ApmwS"
@@ -125,7 +125,7 @@ calculation();
 
  
  var ProductImg = document.getElementById("ProductImg");
- var SmallImg = document.getElementsByClassName("small-img");
+ var SmallImg = document.getElementsByclass("small-img");
 
  SmallImg[0].onclick = function(){
      ProductImg.src = SmallImg[0].src;

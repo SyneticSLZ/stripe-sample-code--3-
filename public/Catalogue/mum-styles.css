@@ -2,10 +2,11 @@
     box-sizing: border-box;
     padding:0;
     margin:0;
-    font-family: 'Source Sans Pro', sans-serif, ;
+    font-family: 'Inter';
     /* color: #1c3852; */
     background-color: transparent;
-    color: red;
+    color: black;
+    background-color: #E9EAF8;
     
 }
 ::-webkit-scrollbar {
@@ -30,16 +31,20 @@
   background: #b30000; 
 }
 .catalogue-page {
-  width: 75%;
-  padding:auto;
- margin:auto;
- text-align:center;
+/* border: red solid 3px; */
+  /* padding:auto;
+  margin:auto; */
+  margin-top: 30px;
+  height: 100%;
+  text-align:center;
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto;
   justify-content: space-between; 
   align-items: center;
-  /* padding: 10px; 
-  flex-wrap: wrap; */
+  /* padding: 10px;  */
+  flex-wrap: wrap;
+  margin-inline: 50px;
+  height: 100%;
 }
 
 @media only screen and (max-width: 768px) {
@@ -52,14 +57,13 @@
 }
 
 .product-section {
-  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   padding: 5px;
   margin: 20px;
-
+/* border: blue 3px solid; */
 }
 
 /* .product-section:hover{
@@ -75,27 +79,29 @@
 
 
 .product-image {
-  width: 100%;
+  width: 90%;
+  border-radius: 50px;
   /* content: url("images/product-5.jpg"); */
 }
 .product-image1 {
-  width: 100%;
+  width: 60%;
+  height: 60%;
   display: none;
   /* content: url("images/product-5.jpg"); */
 }
+/* 
 .product-image:hover {
-  width: 100%;
-  /* display: none; */
-  content: url("images/product-7.jpg"); 
-  /* display:inline; */
+  width: 700%;
+
+  content: url("images/poster 2.png"); 
+
 }
 .product-image1:hover {
-  width: 100%;
+  width: 70%;
   display:inline;
-  /* content: url("images/product-7.jpg"); */
-  /* display:inline; */
-}
 
+}
+ */
 
 /* */
 
@@ -111,30 +117,33 @@
   /* padding-inline:4em;    180 × 226 px */
 }
 .brand {
-  font-size: 15px;
-  color: 
-  #8c8e90;
+  font-size: 25px;
 }
 
-.product-name {
-  font-size: 15px;
+.product-name a{
+  font-size: 35px;
+  font-weight: 400;
+  text-decoration: none;
 }
 .product-name:hover{
     text-decoration: underline;
 }
 
 .product-fit {
-  font-size: 15px;
+  font-size: 30px;
   font-weight: italic;
 
 }
+
 .product-button {
-  /* background-color: rgba(10, 10, 10, 0.616); */
-  color: white;
+  border: rgb(0, 0, 0) 3px solid; 
+  background-color: #E9EAF8;
   padding: 10px 20px;
-  border-radius: 5px;
+  color: black;
+  border-radius: 150px;
   text-align: center;
   text-decoration: none;
   margin-top: 20px;
   display: inline-block;
+  width: 70%;
 }

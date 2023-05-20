@@ -1,5 +1,6 @@
 let shop = document.getElementById('shopping');
-let buttontext = document.getElementsByClassName('addtocart')
+// let buttontext = document.getElementsByclass('addtocart')
+let buttontext = Array.from(document.querySelectorAll('.addtocart'));
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let generateShop =()=>{
@@ -31,8 +32,10 @@ let generateShop =()=>{
       <img class="product-image1" src="${himage}" alt="Product Image">
 
       <div class="product-info">
-        <div class="brand">Varity ORIGINALS</div>
+
+        <div class="brand">ORIGINALS</div>
         <div class="product-name"><a href="${product}"> ${name} </a></div>
+        <div class="product-button">ADD TO CART</div>
       </div>
     </div>
 

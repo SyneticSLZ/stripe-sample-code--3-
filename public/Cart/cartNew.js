@@ -276,3 +276,7 @@ button[i].addEventListener("click", () => {
     })
 })
 }
+// var Threed = document.getElementById("loader-wrapper");
+// $(window).on("load", function(){
+//      Threed.style.display = "none";
+// })

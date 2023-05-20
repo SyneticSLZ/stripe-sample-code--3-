@@ -1,7 +1,7 @@
 var parralax = true
 let addtocartbutton = document.getElementById('add-to-cart');
 let addtocartbutton2 = document.getElementById('add-to-cart2');
-let buttontext = document.getElementsByClassName('addtocart')
+let buttontext = document.getElementsByclass('addtocart')
 let basket = JSON.parse(localStorage.getItem("data")) || [];
 
 let price = "price_1MXSeyKJeZAyw8f4qfbHTGhc"
@@ -138,7 +138,7 @@ calculation();
 
  
  var ProductImg = document.getElementById("ProductImg");
- var SmallImg = document.getElementsByClassName("small-img");
+ var SmallImg = document.getElementsByclass("small-img");
  var Threed = document.getElementById("about-title");
 
  SmallImg[0].onclick = function(){
